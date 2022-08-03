@@ -61,24 +61,24 @@ const SingleCocktail = () => {
         <h2 className='section-title'>{drink}</h2>
         <div className='drink'>
           <img src={drinkThumb} alt={drink} />
-          <p>
-            <span className='drink-data'>{drink}</span>
-          </p>
-          <p>
-            <span className='drink-data'>{glass}</span>
-          </p>
-          <p>
-            <span className='drink-data'>{instructions}</span>
-          </p>
-          {ingredients.map((item, index) => (
-            <>
+          <div className='drink-info'>
+            <p>
+              <span className='drink-data'>{drink}</span>
+            </p>
+            <p>
+              <span className='drink-data'>{glass}</span>
+            </p>
+            <p>
+              <span className='drink-data'>{instructions}</span>
+            </p>
+            {ingredients.map((item, index) => (
               <p>
                 <span className='drink-data'>
                   {item.ingredient} {item.measure}
                 </span>
               </p>
-            </>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     );
